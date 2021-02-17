@@ -1,0 +1,32 @@
+<!-- Main Content -->
+<div class="row">
+  <div class="col-lg-8 col-md-10 mx-auto">
+    <form novalidate>
+      <div class="control-group">
+        <div class="form-group">
+          <label>Title</label>
+          <input type="text" [(ngModel)]="blog.title" [disabled]="process" name="title" class="form-control"
+            placeholder="Your Amazing Blog Name">
+        </div>
+      </div>
+      <div class="control-group">
+        <div class="form-group">
+          <label>Description</label>
+          <textarea rows="5" [(ngModel)]="blog.description" [disabled]="process" name="content" class="form-control"
+            placeholder="Few words about the Blog."></textarea>
+        </div>
+      </div>
+      <br>
+      <app-loading *ngIf="process && (!success && !failure)"></app-loading>
+      <div class="alert alert-success pointer" *ngIf="success" routerLink="/home" role="alert">
+        Your Blog was successfully Posted navigate to Home page or click here to go Home.
+      </div>
+      <div class="alert alert-danger pointer" *ngIf="failure" routerLink="/author-post" role="alert">
+        Error, please try again!
+      </div>
+      <div class="form-group text-center mx-auto" *ngIf="!isSubmit">
+        <button class="btn btn-secondary" (click)="submit();">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

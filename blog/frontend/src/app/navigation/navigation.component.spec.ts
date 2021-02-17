@@ -26,8 +26,4 @@ describe('NavbarComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  // it("should be boolean", () => {
-  //   expect(component.loading).toBeTruthy();
-  // });
-
 });
