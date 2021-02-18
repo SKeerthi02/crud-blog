@@ -1,6 +1,5 @@
 # Run docker-compose -f docker-compose-local.py build
 # Run docker-compose -f docker-compose-local.py up
-# Comments represent alternate or optional configurations
 
 version: '2.1'
 
