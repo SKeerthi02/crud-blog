@@ -1,0 +1,25 @@
+/*.ini
+/**/*.ini
+**/.idea
+/backend/docs
+/backend/.idea
+__pycache__/
+*.py[cod]
+*$py.class
+#/frontend/frontend/*.log
+*.log
+Scratch*.bat
+Notebooks
+/aws-config
+/temp
+database/rds_logs/
+page-source*
+\.vscode/
+extend-env.sh
+nginx/scripts/nohup*
+.mypy_cache
+build_logs.tar.gz
+
+# Mac custom attributes file (Desktop Service Store)
+.DS_Store
+backend/.DS_Store

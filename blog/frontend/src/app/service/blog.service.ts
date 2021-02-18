@@ -31,7 +31,7 @@ export class BlogService {
     return this.apiService.post(environment.api.entries, blog);
   }
 
-  public addDummy(num:number): Observable<any> {
+  public addCelerayTask(num:number): Observable<any> {
     return this.apiService.post(environment.api.entries + '/' + 'dummy', num);
   }
 

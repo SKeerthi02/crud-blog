@@ -19,7 +19,7 @@ textarea.form-control {
 body {
   font-size: 20px;
   color: #212529;
-  font-family: 'Lora', 'Times New Roman', serif;
+  font-family: 'Papyrus', 'Times New Roman', serif;
 }
 
 p {
@@ -55,10 +55,10 @@ a {
   transition: all 0.2s;
 }
 
-a:focus,
-a:hover {
-  color: #0085A1;
-}
+/*a:focus,*/
+/*a:hover {*/
+/*  color: #0085A1;*/
+/*}*/
 
 blockquote {
   font-style: italic;
@@ -108,7 +108,7 @@ img::-moz-selection {
   position: absolute;
   border-bottom: 1px solid #e9ecef;
   background-color: white;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Papyrus', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 #mainNav .navbar-brand {
@@ -220,7 +220,7 @@ img::-moz-selection {
 .post-preview>a:focus,
 .post-preview>a:hover {
   text-decoration: none;
-  color: #0085A1;
+  /*color: #0085A1;*/
 }
 
 .post-preview>a>.post-title {
@@ -248,8 +248,8 @@ img::-moz-selection {
 
 .post-preview>.post-meta>a:focus,
 .post-preview>.post-meta>a:hover {
-  text-decoration: underline;
-  color: #0085A1;
+  text-decoration: none;
+  /*color: #0085A1;*/
 }
 
 @media only screen and (min-width: 768px) {
@@ -277,13 +277,13 @@ img::-moz-selection {
   border-radius: 0;
   background: none;
   box-shadow: none !important;
-  font-family: 'Lora', 'Times New Roman', serif;
+  font-family: 'Papyrus', 'Times New Roman', serif;
 }
 
 .floating-label-form-group input::-webkit-input-placeholder,
 .floating-label-form-group textarea::-webkit-input-placeholder {
   color: #868e96;
-  font-family: 'Lora', 'Times New Roman', serif;
+  font-family: 'Papyrus', 'Times New Roman', serif;
 }
 
 .floating-label-form-group label {
@@ -320,19 +320,13 @@ form .form-group:first-child .floating-label-form-group {
   border-top: 1px solid #dee2e6;
 }
 
-footer {
-  padding: 50px 0 65px;
-}
+/*footer {*/
+/*  padding: px 0 65px;*/
+/*}*/
 
 footer .list-inline {
   margin: 0;
   padding: 0;
-}
-
-footer .copyright {
-  font-size: 14px;
-  margin-bottom: 0;
-  text-align: center;
 }
 
 .btn {
@@ -342,13 +336,13 @@ footer .copyright {
   letter-spacing: 1px;
   text-transform: uppercase;
   border-radius: 0;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Papyrus', Helvetica, sans-serif;
 }
 
-.btn-primary {
-  background-color: #0085A1;
-  border-color: #0085A1;
-}
+/*.btn-primary {*/
+/*  background-color: #0085A1;*/
+/*  border-color: #0085A1;*/
+/*}*/
 
 .btn-primary:hover,
 .btn-primary:focus,

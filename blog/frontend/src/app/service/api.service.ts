@@ -7,7 +7,7 @@ import {HttpHeaders, HttpClient, HttpErrorResponse} from '@angular/common/http';
 const API_BASE_URL = environment.api.base;
 
 @Injectable({
-  providedIn: 'root' // TODO: figure out how to inject service instead of being at root of app
+  providedIn: 'root'
 })
 export class ApiService {
   constructor(private http: HttpClient) {}

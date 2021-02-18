@@ -1,0 +1,87 @@
+# Run docker-compose build
+# Run docker-compose up
+version: '2.1'
+
+services:
+  frontend:
+    container_name: frontend_container
+    build: ./frontend
+    ports:
+      - "4200:4200"
+      - '9876:9876'
+    volumes:
+      - ./frontend:/frontend
+    command: ng serve --host 0.0.0.0 --disable-host-check --port 4200 --poll=2000
+
+  backend:
+    container_name: backend_container
+    restart: always
+    build: ./backend
+    ports:
+      - "5000:5000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+    - ./backend:/backend
+    env_file:
+     - .env_docker
+
+  worker:
+    container_name: worker_container
+    restart: always
+    build: ./backend
+    depends_on:
+      postgres:
+        condition: service_healthy
+#      redis:
+#        condition: service_healthy
+    volumes:
+      - ./backend:/backend
+    env_file:
+      - .env_docker
+    command: celery -A app.celery.celery_worker.celery worker --loglevel=info
+
+  postgres:
+   container_name: postgresql_container
+   restart: always
+   build: ./postgresql
+   volumes:
+     - /var/lib/postgresql
+   ports:
+     - "5432:5432"
+   env_file:
+     - .env_docker
+   healthcheck:
+     test: ["CMD-SHELL", "pg_isready -U postgres"]
+     interval: 10s
+     timeout: 5s
+     retries: 5
+
+  redis:
+    container_name: redis_container
+    restart: always
+    image: redis
+    ports:
+    - 6379:6379
+    healthcheck:
+      test: ["CMD", "redis-cli","ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  nginx:
+    container_name: nginx_container
+    restart: always
+    build:
+      context: .
+      dockerfile: nginx/Dockerfile
+    ports:
+      - "8080:80"
+      - "444:443"
+    depends_on:
+      - backend
+      - frontend
+
+
+
