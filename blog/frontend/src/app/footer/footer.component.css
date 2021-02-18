@@ -1,47 +1,33 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:900);
+footer.footer_container {
+  background-attachment: scroll;
+  position: relative;
+  height: 20% !important;
+  margin-top: 2%;
 
+}
+footer.footer_container .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #212529;
+  opacity: 0.5;
 
-
-.body {
-margin:0;
 }
 
-#red{
-  border-top: solid #A44B4B;
-  border-width: 15px;
-  background: #2E2E2E;
-  position:absolute;
-  bottom:0;
-  height:100%;
-  width:100%;
-  height:10%;
+footer.footer_container .page-heading,
+footer.footer_container .post-heading,
+footer.footer_container .site-heading {
+
+  color: white;
 }
 
-.text {
-  color: #424242;
-  font-family: Lato;
-  font-size: 60px;
-  text-align: center;
-  margin-top: 50px;
+.row{
+  height: 20%;
 }
-
-.text2 {
-  color: #424242;
-  font-family: Lato;
-  font-size: 20px;
-  text-align: center;
-  margin-top: -50px;
-}
-
-.text3 {
-  color: #424242;
-  font-family: Lato;
-  font-size: 20px;
-  text-align: center;
-  margin-top: -20px;
-  float: center;
-}
-
-#page-footer {
-  display: none !important;
+h3 {
+  text-align:center;
+  padding: 1% 0%;
+  font-family: 'Papyrus';
 }
