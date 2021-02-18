@@ -1,14 +1,8 @@
 header.header_container {
-  /*margin-bottom: 50px;*/
-  /*background: no-repeat center center;*/
-  /*background-color: #868e96;*/
   background-attachment: scroll;
   position: relative;
   height: 20% !important;
-  /*-webkit-background-size: cover;*/
-  /*-moz-background-size: cover;*/
-  /*-o-background-size: cover;*/
-  /*background-size: cover;*/
+
 }
 
 header.header_container .overlay {
