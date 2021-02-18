@@ -6,7 +6,7 @@ import {BlogService} from '../service/blog.service';
 @Component({
   selector: 'app-display-blog',
   templateUrl: './display-blog.component.html',
-  styleUrls: []
+  styleUrls: ['./display-blog.component.css']
 })
 export class DisplayBlogComponent implements OnInit {
   @Input() blog: Blog;
