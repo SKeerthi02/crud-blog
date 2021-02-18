@@ -10,7 +10,7 @@ import {BlogService} from '../service/blog.service';
 })
 export class HomePageComponent implements OnInit {
   loading: boolean = true;
-  addDummyText: string = 'add Dummy';
+  addDummyText: string = 'add sample blog';
   blogs: Blog[];
 
   constructor(private blogService: BlogService) {}
@@ -25,7 +25,14 @@ export class HomePageComponent implements OnInit {
       this.loading = false;
     });
   }
-
+  private celeryTask(): void {
+    if(this.addDummyText === 'add sample blog') {
+      this.blogService.addCelerayTask(1).subscribe(res => {
+      });
+      this.addDummyText = 'Please Wait';
+      setInterval(() => this.getAllBlogs(),5000);
+    }
+  }
   private refresh(event): void {
     this.blogs = this.blogs.filter(item => item !== event);
   }
