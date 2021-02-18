@@ -17,14 +17,14 @@
 
     <!-- Update Button -->
     <div *ngIf="!editable" class="clearfix text-center float-left mx-auto">
-      <a (click)="editableToggle();" class="btn btn-light pointer">
+      <a (click)="editableToggle();" class="btn btn-light pointer edit-color">
         Edit
         <i class="" aria-hidden="true"></i></a>
     </div>
 
     <!-- Delete Button -->
     <div *ngIf="!editable" class="clearfix text-center float-right mx-auto">
-      <a (click)="deleteBlog();" class="btn btn-light pointer">
+      <a (click)="deleteBlog();" class="btn btn-light pointer delete-color">
         Delete
         <i class="" aria-hidden="true"></i></a>
     </div>

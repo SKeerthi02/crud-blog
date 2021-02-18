@@ -7,7 +7,7 @@ import {Blog} from '../models/blog';
 @Component({
   selector: 'app-view-blog',
   templateUrl: './view-blog.component.html',
-  styleUrls: []
+  styleUrls: ['./view-blog.component.css']
 })
 export class ViewBlogComponent implements OnInit {
   loading = true;
