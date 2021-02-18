@@ -4,16 +4,16 @@
     <form novalidate>
       <div class="control-group">
         <div class="form-group">
-          <label>Title</label>
-          <input type="text" [(ngModel)]="blog.title" [disabled]="process" name="title" class="form-control"
-            placeholder="Your Amazing Blog Name">
+          <label>Food</label>
+          <input type="text" [(ngModel)]="blog.title" [disabled]="process" name="Food" class="form-control"
+            placeholder="Name of the Dish">
         </div>
       </div>
       <div class="control-group">
         <div class="form-group">
-          <label>Description</label>
+          <label>Steps to Prepare</label>
           <textarea rows="5" [(ngModel)]="blog.description" [disabled]="process" name="content" class="form-control"
-            placeholder="Few words about the Blog."></textarea>
+            placeholder="Add your Recipe."></textarea>
         </div>
       </div>
       <br>
@@ -25,7 +25,7 @@
         Error, please try again!
       </div>
       <div class="form-group text-center mx-auto" *ngIf="!isSubmit">
-        <button class="btn btn-secondary" (click)="submit();">Submit</button>
+        <button class="btn btn-secondary submit-color" (click)="submit();">Submit</button>
       </div>
     </form>
   </div>

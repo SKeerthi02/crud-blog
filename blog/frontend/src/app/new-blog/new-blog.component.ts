@@ -5,7 +5,7 @@ import {Blog} from '../models/blog';
 @Component({
   selector: 'app-new-blog',
   templateUrl: './new-blog.component.html',
-  styleUrls: []
+  styleUrls: ['./new-blog.component.css']
 })
 export class NewBlogComponent implements OnInit {
   @Input() public blog: Blog;
@@ -31,9 +31,8 @@ export class NewBlogComponent implements OnInit {
 
     if (this.edit === false) {
       this.blogService.addBlog(this.blog).subscribe(
-      // response => console.log('response on new post: ' + JSON.stringify(response))
+
       response => {
-        // Handle each observable response
         console.log('result: ' + response);
         this.process = false;
       },
@@ -48,7 +47,7 @@ export class NewBlogComponent implements OnInit {
     );
     } else {
       this.blogService.editBlog(this.blog.id, this.blog).subscribe(
-      // response => console.log('response on new post: ' + JSON.stringify(response))
+
       response => {
         // Handle each observable response
         console.log('result: ' + response);
